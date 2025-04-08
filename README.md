@@ -27,18 +27,7 @@ This project implements a Generative Adversarial Network (GAN) for image synthes
 
 - To evaluate the model, use SSIM to compare generated and real images:
 
-from skimage.metrics import structural_similarity as ssim \n
-
-real_img = real_imgs[0].cpu().numpy().squeeze()
-
-fake_img = fake_imgs[0].cpu().numpy().squeeze()
-
-score = ssim(real_img, fake_img, data_range=fake_img.max() - fake_img.min())
-
-print(f"SSIM: {score}")
-
 A higher SSIM score indicates better similarity.
-
 
 Low SSIM: Continue training or adjust the GAN architecture.
 
